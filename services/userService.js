@@ -17,6 +17,18 @@ class UserService {
   async deleteUser(id) {
     return User.findByIdAndDelete(id);
   }
+
+  async showAllUser() {
+    return User.find();
+  }
+
+  async findUserByAccountNumber(accountNumber) {
+    return User.findOne({ accountNumber });
+  }
+
+  async findUserByIdentityNumber(identityNumber) {
+    return User.findOne({ identityNumber });
+  }
 }
 
 module.exports = new UserService();
