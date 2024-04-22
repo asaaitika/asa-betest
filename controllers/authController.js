@@ -18,7 +18,6 @@ class AuthController {
         }
         const token = authService.generateToken(user);
         token.then((value) => {
-            console.log('VALUE: ',value)
           res.status(200).json({ message: "success", token: value });
         });
       });
