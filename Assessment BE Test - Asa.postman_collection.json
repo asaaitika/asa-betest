@@ -1,0 +1,1100 @@
+{
+	"info": {
+		"_postman_id": "7c696a82-0629-4f56-aec2-29cb859a98c8",
+		"name": "Assessment BE Test - Asa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13559096"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"junho\",\n  \"accountNumber\": \"99889988\",\n  \"emailAddress\": \"junho@gmail.com\",\n  \"identityNumber\": \"99889988JH\",\n  \"password\": \"asdfgh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success: Create User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userName\": \"chansung\",\n  \"accountNumber\": \"0087367373\",\n  \"emailAddress\": \"chansung@gmail.com\",\n  \"identityNumber\": \"0087367373CS\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "200"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c8-AUUBgz+cSUmOjO67a6V5H6YLVIU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 18:15:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User created successfully\",\n    \"data\": {\n        \"userName\": \"chansung\",\n        \"accountNumber\": \"0087367373\",\n        \"emailAddress\": \"chansung@gmail.com\",\n        \"identityNumber\": \"0087367373CS\",\n        \"_id\": \"662557a5d8e6431c60c7d7a7\"\n    }\n}"
+				},
+				{
+					"name": "Error: Validation",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userNa\": \"nichkhun\",\n  \"accountNumber\": \"009292727\",\n  \"emailAddress\": \"nichkhun@gmail.com\",\n  \"identityNumber\": \"009292727NK\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "76"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4c-RL2Emw68G0Lah8i+Azd0Q8oqIGk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 18:08:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User validation failed: userName: Path `userName` is required.\"\n}"
+				},
+				{
+					"name": "Success: With Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userName\": \"junho\",\n  \"accountNumber\": \"99889988\",\n  \"emailAddress\": \"junho@gmail.com\",\n  \"identityNumber\": \"99889988JH\",\n  \"password\": \"asdfgh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "264"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"108-l/NHWx4aVnDbblBf81wXseuhVr4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 18:56:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User created successfully\",\n    \"data\": {\n        \"userName\": \"junho\",\n        \"accountNumber\": \"99889988\",\n        \"emailAddress\": \"junho@gmail.com\",\n        \"identityNumber\": \"99889988JH\",\n        \"password\": \"$2b$10$juiQUklVu3R2KCXSA6hifufYKDVtFIx5NUxonvOYzUyh4kCBqwCUG\",\n        \"_id\": \"662561782657c65975607345\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjU2MTc4MjY1N2M2NTk3NTYwNzM0NSIsImlhdCI6MTcxMzcyNjk3MiwiZXhwIjoxNzEzNzMwNTcyfQ.Mf4Yt4PbIOEEs6m0SnvNyXfJBurJdruFpk4ib_s9xkE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"userName\": \"nyai\"\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user/662561782657c65975607345",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"662561782657c65975607345"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success: Update User",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userName\": \"hwang chansung\"\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/662557a5d8e6431c60c7d7a7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"662557a5d8e6431c60c7d7a7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "213"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d5-0z7K4KzktWw/dgqgwCXSA23At1I\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 18:15:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User updated successfully\",\n    \"data\": {\n        \"_id\": \"662557a5d8e6431c60c7d7a7\",\n        \"userName\": \"hwang chansung\",\n        \"accountNumber\": \"0087367373\",\n        \"emailAddress\": \"chansung@gmail.com\",\n        \"identityNumber\": \"0087367373CS\"\n    }\n}"
+				},
+				{
+					"name": "Success: With Token",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjU2MTc4MjY1N2M2NTk3NTYwNzM0NSIsImlhdCI6MTcxMzcyNjk3MiwiZXhwIjoxNzEzNzMwNTcyfQ.Mf4Yt4PbIOEEs6m0SnvNyXfJBurJdruFpk4ib_s9xkE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userName\": \"nyai\"\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/662561782657c65975607345",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"662561782657c65975607345"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "263"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"107-E8YpavwSWNhKyDuBHNAItttXF2I\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 19:21:40 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User updated successfully\",\n    \"data\": {\n        \"_id\": \"662561782657c65975607345\",\n        \"userName\": \"nyai\",\n        \"accountNumber\": \"99889988\",\n        \"emailAddress\": \"junho@gmail.com\",\n        \"identityNumber\": \"99889988JH\",\n        \"password\": \"$2b$10$juiQUklVu3R2KCXSA6hifufYKDVtFIx5NUxonvOYzUyh4kCBqwCUG\"\n    }\n}"
+				},
+				{
+					"name": "Error: Failed Auth Token",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjU2MTc4MjY1N2M2NTk3NTYwNzM0NSIsImlhdCI6MTcxMzcyNjk3MiwiZXhwIjoxNzEzNzMwNTcyfQ.Mf4Yt4PbIOEEs6m0SnvNyXfJBurJdruFpk4ib_s9xkE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userName\": \"nyai\"\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/user/662561782657c65975607345",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"662561782657c65975607345"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-xXAsqSZ9yYI0VjqmabJjCbfz1ds\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 19:23:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Failed to authenticate token\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Data User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success: All Data User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "766"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2fe-3ZpRE/kG+UYl/VUyi849Gz9MnrE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 18:21:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"All Data User found successfully\",\n    \"data\": [\n        {\n            \"userName\": \"asaaitika\",\n            \"accountNumber\": \"23568256\",\n            \"emailAddress\": \"asaaitika@gmail.com\",\n            \"identityNumber\": \"K00112212\"\n        },\n        {\n            \"_id\": \"662545a0b78a945eca3b34b5\",\n            \"userName\": \"rahma\",\n            \"accountNumber\": \"9999934534\",\n            \"emailAddress\": \"rahma@gmail.com\",\n            \"identityNumber\": \"88899734958794\"\n        },\n        {\n            \"_id\": \"6625467d84294128af483eb5\",\n            \"userName\": \"dewi\",\n            \"accountNumber\": \"876934534\",\n            \"emailAddress\": \"dewi@gmail.com\",\n            \"identityNumber\": \"87699734958794\"\n        },\n        {\n            \"_id\": \"662554110c08bbb9b91f1ff4\",\n            \"userName\": \"bebeb\",\n            \"accountNumber\": \"97687678667\",\n            \"emailAddress\": \"bebeb@gmail.com\",\n            \"identityNumber\": \"99734958794\"\n        },\n        {\n            \"_id\": \"662555e9bc0433308a84ab6b\",\n            \"userName\": \"nichkhun\",\n            \"accountNumber\": \"009292727\",\n            \"emailAddress\": \"nichkhun@gmail.com\",\n            \"identityNumber\": \"009292727NK\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/user/662561782657c65975607345",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"662561782657c65975607345"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success: User By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/662557a5d8e6431c60c7d7a7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"662557a5d8e6431c60c7d7a7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "204"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cc-6aMDJc62jvD3eSWNCppY1FkqYSk\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 18:16:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User found successfully\",\n    \"data\": {\n        \"_id\": \"662557a5d8e6431c60c7d7a7\",\n        \"userName\": \"hwang chansung\",\n        \"accountNumber\": \"0087367373\",\n        \"emailAddress\": \"chansung@gmail.com\",\n        \"identityNumber\": \"0087367373CS\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User By Account Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/users/account-number/99889988",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"account-number",
+						"99889988"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success: User By Account Number",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/users/account-number/23568256",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"account-number",
+								"23568256"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "180"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b4-gcuerQeuZMhMiwlgIiiJXnkXH98\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 18:32:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User found by account number successfully\",\n    \"data\": {\n        \"userName\": \"asaaitika\",\n        \"accountNumber\": \"23568256\",\n        \"emailAddress\": \"asaaitika@gmail.com\",\n        \"identityNumber\": \"K00112212\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get User By Identify Number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/users/identify-number/88899734958794",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"identify-number",
+						"88899734958794"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success: User By Identify Number",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/users/identify-number/88899734958794",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"identify-number",
+								"88899734958794"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "213"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d5-PnIsU8Dx921Bx6h+U377GQYs66s\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 18:34:12 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User found by identity number successfully\",\n    \"data\": {\n        \"_id\": \"662545a0b78a945eca3b34b5\",\n        \"userName\": \"rahma\",\n        \"accountNumber\": \"9999934534\",\n        \"emailAddress\": \"rahma@gmail.com\",\n        \"identityNumber\": \"88899734958794\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete User By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/user/662557a5d8e6431c60c7d7a7",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"662557a5d8e6431c60c7d7a7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success: Delete User",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/662557a5d8e6431c60c7d7a7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"662557a5d8e6431c60c7d7a7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "213"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"d5-jcI0l7yJzgEDujf7JPpnlETg9b4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 18:17:48 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User deleted successfully\",\n    \"data\": {\n        \"_id\": \"662557a5d8e6431c60c7d7a7\",\n        \"userName\": \"hwang chansung\",\n        \"accountNumber\": \"0087367373\",\n        \"emailAddress\": \"chansung@gmail.com\",\n        \"identityNumber\": \"0087367373CS\"\n    }\n}"
+				},
+				{
+					"name": "Error: Not Found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/662557a5d8e6431c60c7d7a7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"662557a5d8e6431c60c7d7a7"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-ZEVVcvtFhxKX/QUvVKqKxwGbbNA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 18:18:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User not found\"\n}"
+				},
+				{
+					"name": "Error: No Token",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/user/662557a5d8e6431c60c7d7a7",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"662557a5d8e6431c60c7d7a7"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f-pZK48A3ZbwxVl8UtZcC9y8sBFbw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 19:24:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"No token provided\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"accountNumber\": \"99889988\",\n    \"password\": \"asdfgh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Error: Invalid Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountNumber\": \"99889988\",\n    \"password\": \"asdfg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1e-PvqgqjiSsn+tQQwY1tAq1BFwX0M\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 18:59:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Invalid password\"\n}"
+				},
+				{
+					"name": "Success: Token",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountNumber\": \"99889988\",\n    \"password\": \"asdfgh\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "203"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cb-zJZ+UcQydvJ0xlfxI/gzkukJbKs\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 21 Apr 2024 19:13:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MjU2MTc4MjY1N2M2NTk3NTYwNzM0NSIsImlhdCI6MTcxMzcyNjgzMiwiZXhwIjoxNzEzNzMwNDMyfQ.MvX8KY18cf6ab3KFubRZePGg-4ovDDtI7QsQSc7K35g\"\n}"
+				}
+			]
+		}
+	]
+}
